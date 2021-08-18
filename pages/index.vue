@@ -5,12 +5,10 @@
     </div>
     <ul v-else>
       <li v-for="post in posts" :key="post.id">
-        {{ post.title }} | {{ post.created_at }} <br />
-        {{ post.body }}
-        <br />
-        {{ post.subcategory.name }}
-        <br />
-        <br />
+        <div class="box">
+          <h1 class="title">{{ post.title }}</h1>
+          <h2 class="subtitle">{{ post.body }} | {{ post.created_at }}</h2>
+        </div>
       </li>
     </ul>
   </div>
