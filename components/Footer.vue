@@ -1,5 +1,7 @@
 <template>
-  <div class="container">
-    <div>this is a footer</div>
-  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>Kaganat.com</p>
+    </div>
+  </footer>
 </template>
