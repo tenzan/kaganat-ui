@@ -6,9 +6,9 @@
     <ul v-else>
       <li v-for="post in posts" :key="post.id">
         <div class="box">
+          <strong>{{ post.title }}</strong>
           <p>{{ $moment(post.created_at).format('LLLL') }}</p>
-          <h1 class="title">{{ post.title }}</h1>
-          <p>{{ post.body }}</p>
+          <p>{{ post.body.slice(0, 180) }}...</p>
         </div>
       </li>
     </ul>
@@ -18,12 +18,14 @@
 <script>
 export default {
   name: 'App',
+
   data() {
     return {
       posts: [],
       error: null,
     }
   },
+
   async mounted() {
     try {
       const response = await this.$axios.get('/posts')
