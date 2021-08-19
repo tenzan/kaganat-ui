@@ -8,9 +8,7 @@
         <div class="box">
           <p>{{ $moment(post.created_at).format('LLLL') }}</p>
           <h1 class="title">{{ post.title }}</h1>
-          <h2 class="subtitle">
-            {{ post.body }}
-          </h2>
+          <p>{{ post.body }}</p>
         </div>
       </li>
     </ul>
