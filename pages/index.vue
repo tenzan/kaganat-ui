@@ -9,6 +9,7 @@
           <strong>{{ post.title }}</strong>
           <p>{{ $moment(post.created_at).format('LLLL') }}</p>
           <p>{{ post.body.slice(0, 180) }}...</p>
+          <b-image :src="post.images[0].formats.thumbnail.url"></b-image>
         </div>
       </li>
     </ul>
